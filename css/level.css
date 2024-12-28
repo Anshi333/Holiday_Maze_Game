@@ -1,0 +1,81 @@
+body {
+    background-image: url("../images/backg2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#icon {
+    display: flex;
+    justify-content: right;
+    gap:20px;
+    align-items: center;
+    padding: 10px 20px; 
+    z-index: 2; 
+}
+
+.menu {
+    height: 25px;
+}
+
+.home {
+    height: 40px;
+}
+
+#bghouse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; 
+}
+
+#levels {
+    position: absolute; 
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    z-index: 3;
+}
+
+#one,
+#two {
+    display: flex;
+    justify-content: center;
+    gap: 130px; 
+}
+
+.button {
+    width: 140px;
+    height: auto; 
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu, .home {
+        height: 30px; 
+    }
+
+    .button {
+        width: 120px; 
+    }
+
+    #levels {
+        gap: 20px; 
+    }
+}

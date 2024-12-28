@@ -1,0 +1,49 @@
+body {
+    background-image: url("../images/15.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.buttons {
+    position: absolute;
+    left: 50%; 
+    top:58%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    z-index: 2;
+}
+
+.again, .next, .home {
+    height: 10vw; 
+    max-height: 70px; 
+    width: auto;
+    cursor: pointer;
+}
+
+.congoimg {
+    width: 50%; 
+    max-width: 500px; 
+    height: auto; 
+    z-index: 1; 
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .congoimg {
+        width: 50%; 
+    }
+
+    .again, .next, .home {
+        height: 12vw; 
+    }
+}

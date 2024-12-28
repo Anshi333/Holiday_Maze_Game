@@ -1,0 +1,75 @@
+body {
+    background-image: url("../images/11.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#icon {
+    display: flex;
+    justify-content: right;
+    gap:20px;
+    align-items: center;
+    padding: 10px 10px 20px; 
+    z-index: 2; 
+}
+
+.again {
+    height: 35px;
+}
+
+.menu {
+    height: 25px;
+}
+
+.home {
+    height: 40px;
+}
+
+#mazeContainer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 30px;
+}
+
+#mazeCanvas {
+    border: solid 4px #331F1B;
+    border-radius: 1rem;
+    width: 100%; 
+    max-width: 380px; 
+    height: auto; 
+    max-height: 380px; 
+    display: block;
+}
+
+#instructions {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family:cursive;
+    color:maroon;
+}
+
+@media (max-width: 768px) {
+    .again, .menu, .home {
+        height: 30px; 
+    }
+
+    #mazeCanvas {
+        width: 90%; 
+        max-width: 280px; 
+        max-height: 280px; 
+    }
+
+    #instructions {
+        font-size: 16px;
+    }
+}
