@@ -11,6 +11,13 @@ body {
     position: relative;
 }
 
+#header{
+    display: flex;
+    align-items: center;
+    z-index: 2; 
+    justify-content: space-between;
+    padding-right: 30px;
+}
 #icon {
     display: flex;
     justify-content: right;
@@ -20,6 +27,16 @@ body {
     z-index: 2; 
 }
 
+.minilog{
+    width:200px;
+    height: auto;
+    align-items: start;
+}
+
+.level{
+    width:200px;
+    height: auto;
+}
 .again {
     height: 35px;
 }
@@ -40,6 +57,7 @@ body {
 }
 
 #mazeCanvas {
+    background-color: #fffaf0;
     border: solid 4px #331F1B;
     border-radius: 1rem;
     width: 100%; 
@@ -58,9 +76,26 @@ body {
     color:maroon;
 }
 
+
 @media (max-width: 768px) {
+    #header {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px; 
+    }
+
+    #icon {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 10px; 
+    }
+
     .again, .menu, .home {
-        height: 30px; 
+        height: 25px; 
+    }
+
+    .minilog, .level {
+        width: 120px; 
     }
 
     #mazeCanvas {
@@ -70,6 +105,7 @@ body {
     }
 
     #instructions {
-        font-size: 16px;
+        font-size: 16px; 
     }
 }
+

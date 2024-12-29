@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/backg2.png");
+    background-image: url("../images/masterbg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -13,19 +13,29 @@ body {
 
 #icon {
     display: flex;
-    justify-content: right;
-    gap:20px;
+    gap:100px;
     align-items: center;
     padding: 10px 20px; 
     z-index: 2; 
+    justify-content: space-between;
+    padding-right: 30px;
+}
+#controls{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .menu {
     height: 25px;
+    align-items: flex-end;
+    padding-right: 10px;
 }
 
 .home {
     height: 40px;
+    align-items: flex-end;
+    padding-right: 10px;;
 }
 
 #bghouse{
@@ -60,15 +70,31 @@ body {
     gap: 130px; 
 }
 
+.minilog{
+    width:200px;
+    height: auto;
+    align-items: start;
+}
+
 .button {
     width: 140px;
     height: auto; 
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/* Laptops and Tablets */
+@media (max-width: 1024px) {
+    #icon {
+        gap: 50px;
+        padding-right: 20px;
+    }
+
     .menu, .home {
         height: 30px; 
+    }
+
+    .minilog {
+        width: 150px; 
     }
 
     .button {
@@ -76,6 +102,51 @@ body {
     }
 
     #levels {
+        gap: 25px; 
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px; 
+    }
+
+    #icon {
+        flex-direction: column; 
         gap: 20px; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    #controls {
+        flex-direction: row; 
+        gap: 15px; 
+    }
+
+    .menu, .home {
+        height: 25px;
+        padding-right: 0; 
+    }
+
+    .minilog {
+        width: 120px;
+    }
+
+    #bghouse {
+        justify-content: flex-start;
+    }
+
+    #levels {
+        top: 70%; 
+        gap: 20px; 
+    }
+
+    .button {
+        width: 100px; 
+    }
+
+    #one, #two {
+        gap: 80px;
     }
 }
