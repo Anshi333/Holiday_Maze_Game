@@ -7,12 +7,11 @@ const cols = 15;
 const tileSize = canvas.width / cols;
 
 const candyCaneImg = new Image();
-candyCaneImg.src = '../images/cc.png';
+candyCaneImg.src = 'https://Anshi333.github.io/Holiday_Maze_Game/images/cc.png';
 
 const houseImg = new Image();
-houseImg.src = '../images/mazeh.png';
+houseImg.src = 'https://Anshi333.github.io/Holiday_Maze_Game/images/mazeh.png';
 
-// Directions for moving (up, down, left, right)
 const directions = [
     [-1, 0], // up
     [1, 0],  // down
@@ -20,42 +19,32 @@ const directions = [
     [0, 1],  // right
 ];
 
-// Initialize maze with walls (1)
 const maze = Array.from({ length: rows }, () => Array(cols).fill(1));
 
-// Function to check if the move is valid
 function isValidMove(x, y) {
     return x >= 0 && x < rows && y >= 0 && y < cols && maze[x][y] === 1;
 }
 
-// Maze generation function
 function carveMaze(x, y) {
-    maze[x][y] = 0; // Mark the current cell as part of the path (0)
-
-    // Shuffle directions to randomize the carving process
+    maze[x][y] = 0; 
     const shuffledDirections = directions.sort(() => Math.random() - 0.5);
 
-    // Try each direction
     for (const [dx, dy] of shuffledDirections) {
-        const nx = x + dx * 2; // Skip one cell to ensure path width
+        const nx = x + dx * 2; 
         const ny = y + dy * 2;
 
         if (isValidMove(nx, ny)) {
-            maze[x + dx][y + dy] = 0; // Carve the wall between current and next cell
-            carveMaze(nx, ny); // Recursively carve further
+            maze[x + dx][y + dy] = 0; 
+            carveMaze(nx, ny); 
         }
     }
 }
 
-// Start carving from the top-left corner
 carveMaze(0, 0);
 
-// Ensure the bottom-right corner is the exit (0)
-maze[rows - 1][cols - 1] = 2; // Set exit at bottom-right
-
+maze[rows - 1][cols - 1] = 2; 
 let player = { x: 0, y: 0 };
 
-// Function to draw the maze on the canvas
 function drawMaze() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -64,25 +53,23 @@ function drawMaze() {
             const tile = maze[row][col];
 
             if (tile === 1) {
-                ctx.fillStyle = '#331F1B'; // Wall color
+                ctx.fillStyle = '#331F1B'; 
                 ctx.fillRect(col * tileSize, row * tileSize, tileSize, tileSize);
             } else if (tile === 2) {
-                ctx.drawImage(houseImg, col * tileSize, row * tileSize, tileSize, tileSize); // Exit (house)
+                ctx.drawImage(houseImg, col * tileSize, row * tileSize, tileSize, tileSize); 
             }
         }
     }
 
-    ctx.drawImage(candyCaneImg, player.x * tileSize, player.y * tileSize, tileSize, tileSize); // Player
+    ctx.drawImage(candyCaneImg, player.x * tileSize, player.y * tileSize, tileSize, tileSize);
 }
 
-// Function to check if player has won
 function checkWin() {
     if (maze[player.y][player.x] === 2) {
-        window.location.href = '../cong2.html'; // Redirect to a new page on win
+        window.location.href = 'https://Anshi333.github.io/Holiday_Maze_Game/cong2.html'; 
     }
 }
 
-// Function to move player
 function movePlayer(dx, dy) {
     const newX = player.x + dx;
     const newY = player.y + dy;
@@ -95,7 +82,6 @@ function movePlayer(dx, dy) {
     }
 }
 
-// Event listener for keydown to move the player
 document.addEventListener('keydown', (e) => {
     switch (e.key) {
         case 'ArrowUp':
@@ -113,7 +99,6 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Initialize and draw the maze when the window is loaded
 window.onload = function () {
     drawMaze();
 };
