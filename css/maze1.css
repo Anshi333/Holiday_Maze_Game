@@ -113,7 +113,7 @@ body {
     #header {
         flex-direction: column; 
         align-items: center;
-        padding: 10px; 
+        gap: 10px; 
     }
 
     #icon {
@@ -123,11 +123,11 @@ body {
     }
 
     .again, .menu, .home {
-        height: 25px; 
+        height: 23px; 
     }
 
     .minilog, .level {
-        width: 120px; 
+        width: 160px; 
     }
 
     #mazeCanvas {
