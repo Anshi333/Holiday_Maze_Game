@@ -54,6 +54,8 @@ body {
     justify-content: center; 
     align-items: center;
     margin-top: 30px;
+    gap: 20px; 
+    flex-direction: row;
 }
 
 #mazeCanvas {
@@ -74,6 +76,36 @@ body {
     font-weight: bold;
     font-family:cursive;
     color: maroon;
+}
+
+#controlPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#middleRow {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+#controlPanel button {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    border: solid 2px #331F1B;
+    border-radius: 5px;
+    background-color: #fffaf0;
+    color: #331F1B;
+    cursor: pointer;
+}
+
+#controlPanel button:hover {
+    background-color: #331F1B;
+    color: #fffaf0;
 }
 
 
@@ -106,5 +138,24 @@ body {
 
     #instructions {
         font-size: 16px; 
+    }
+    #mazeContainer {
+        flex-direction: column; 
+    }
+
+    #controlPanel {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    #middleRow {
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    #controlPanel button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
     }
 }
