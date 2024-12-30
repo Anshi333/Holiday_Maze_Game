@@ -100,6 +100,11 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+document.getElementById('upButton').addEventListener('click', () => movePlayer(0, -1));
+document.getElementById('downButton').addEventListener('click', () => movePlayer(0, 1));
+document.getElementById('leftButton').addEventListener('click', () => movePlayer(-1, 0));
+document.getElementById('rightButton').addEventListener('click', () => movePlayer(1, 0));
+
 window.onload = function () {
     drawMaze();
 };
