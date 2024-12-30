@@ -36,7 +36,28 @@ body {
     height: auto; 
 }
 
+/* mobile Devices*/
 @media (max-width: 768px) {
+    body{
+        flex-direction: column-reverse; 
+        justify-content: center; 
+        align-items: center;    
+    }
+
+
+    #front {
+        margin-right: 0; 
+        gap: 20px; 
+    }
+
+    .house{
+        width: 200px;
+    }
+    .logo{
+        width: 250px;
+        transform: rotate(357deg);
+    }
+    
     .button {
         width: 150px; 
     }
