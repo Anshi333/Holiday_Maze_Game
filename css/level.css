@@ -112,11 +112,11 @@ body {
 
     #bghouse {
         justify-content: center;
+        align-items:center;
         position: relative;
     }
     .house{
-        top:50%;
-        left:50%;
+        justify-content:center;
         width:100% ;
         max-width: 100%;  
         height: auto;
