@@ -112,9 +112,12 @@ body {
 
     #bghouse {
         justify-content: flex-start;
+        position: relative;
     }
     .house{
-        width: 400px;
+        width:100% ;
+        max-width: 100%;  
+        height: auto;
     }
 
     #levels {
