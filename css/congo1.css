@@ -41,6 +41,8 @@ body {
 @media (max-width: 768px) {
     .congoimg {
         width: 50%; 
+        max-width: 50%; 
+        height:auto;
     }
 
     .again, .next, .home {
