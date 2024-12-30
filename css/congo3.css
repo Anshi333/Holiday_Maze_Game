@@ -40,9 +40,14 @@ body {
 
 @media (max-width: 768px) {
     .congoimg {
-        width: 50%; 
+        width: 100%;
+        max-width: 100%; 
     }
-
+    
+    .imagecong{
+        max-width: 100%;
+    }
+    
     .again, .home {
         height: 12vw; 
     }
