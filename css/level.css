@@ -115,9 +115,11 @@ body {
         position: relative;
     }
     .house{
+        position: absolute;
         width:100% ;
         max-width: 100%;  
         height: auto;
+        z-index: 1; 
     }
 
     #levels {
