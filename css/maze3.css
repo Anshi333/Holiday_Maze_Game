@@ -54,6 +54,8 @@ body {
     justify-content: center; 
     align-items: center;
     margin-top: 30px;
+    gap: 20px; 
+    flex-direction: row;
 }
 
 #mazeCanvas {
@@ -76,12 +78,41 @@ body {
     color:maroon;
 }
 
+#controlPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#middleRow {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+#controlPanel button {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    border: solid 2px #331F1B;
+    border-radius: 5px;
+    background-color: #fffaf0;
+    color: #331F1B;
+    cursor: pointer;
+}
+
+#controlPanel button:hover {
+    background-color: #331F1B;
+    color: #fffaf0;
+}
 
 @media (max-width: 768px) {
     #header {
         flex-direction: column; 
         align-items: center;
-        padding: 10px; 
+        gap: 5px; 
     }
 
     #icon {
@@ -91,11 +122,11 @@ body {
     }
 
     .again, .menu, .home {
-        height: 25px; 
+        height: 23px; 
     }
 
     .minilog, .level {
-        width: 120px; 
+        width: 160px; 
     }
 
     #mazeCanvas {
@@ -107,4 +138,25 @@ body {
     #instructions {
         font-size: 16px; 
     }
+
+    #mazeContainer {
+        flex-direction: column; /* Stack maze and buttons */
+    }
+
+    #controlPanel {
+        flex-direction: column; /* Align buttons horizontally below the maze */
+        gap: 10px;
+    }
+
+    #middleRow {
+        flex-direction: row; /* Stack left and right buttons vertically */
+        align-items: center;
+    }
+
+    #controlPanel button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
 }
