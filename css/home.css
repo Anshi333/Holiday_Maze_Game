@@ -40,7 +40,7 @@ body {
 @media (max-width: 768px) {
     body{
         flex-direction: column-reverse; 
-        justify-content: space-between; 
+        justify-content: center; 
         align-items: center;    
     }
 
