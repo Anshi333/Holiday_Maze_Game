@@ -40,7 +40,7 @@ body {
 @media (max-width: 768px) {
     body{
         flex-direction: column-reverse; 
-        justify-content: center; 
+        justify-content: space-between; 
         align-items: center;    
     }
 
@@ -59,6 +59,6 @@ body {
     }
     
     .button {
-        width: 150px; 
+        width: 190px; 
     }
 }
