@@ -111,7 +111,7 @@ body {
     }
 
     #bghouse {
-        justify-content: flex-start;
+        justify-content: center;
         position: relative;
     }
     .house{
@@ -123,7 +123,8 @@ body {
     #levels {
         gap: 20px; 
         position: absolute; 
-        top: 20px; 
+        justify-content: center;
+        top: 50%; 
         left: 50%;
         transform: translateX(-50%); 
         z-index: 1; 
