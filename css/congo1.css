@@ -45,6 +45,10 @@ body {
         height:auto;
     }
 
+    .imagecong{
+        max-width: 100%;
+    }
+    
     .again, .next, .home {
         height: 12vw; 
     }
