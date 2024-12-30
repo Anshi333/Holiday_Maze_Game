@@ -82,29 +82,6 @@ body {
     cursor: pointer;
 }
 
-/* Laptops and Tablets */
-@media (max-width: 1024px) {
-    #icon {
-        gap: 50px;
-        padding-right: 20px;
-    }
-
-    .menu, .home {
-        height: 30px; 
-    }
-
-    .minilog {
-        width: 150px; 
-    }
-
-    .button {
-        width: 120px; 
-    }
-
-    #levels {
-        gap: 25px; 
-    }
-}
 
 /* Mobile Devices */
 @media (max-width: 768px) {
@@ -113,9 +90,9 @@ body {
     }
 
     #icon {
-        flex-direction: column; 
+        flex-direction: row; 
         gap: 20px; 
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -130,15 +107,17 @@ body {
     }
 
     .minilog {
-        width: 120px;
+        width: 150px;
     }
 
     #bghouse {
         justify-content: flex-start;
     }
+    .house{
+        width: 400px;
+    }
 
     #levels {
-        top: 70%; 
         gap: 20px; 
     }
 
