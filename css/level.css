@@ -115,7 +115,8 @@ body {
         position: relative;
     }
     .house{
-        position: absolute;
+        top:50%;
+        left:50%;
         width:100% ;
         max-width: 100%;  
         height: auto;
